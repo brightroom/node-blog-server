@@ -1,0 +1,34 @@
+<!-- views/pages/services.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+        <div class="row services">
+            <% for(service of services) { %>
+                <div class="col-md-4">
+                    <div class="service">
+                            <h2><%= service %></h2>
+                    </div>
+                </div>
+            <% } %>
+        </div>
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+
+</body>
+
+</html>

@@ -1,0 +1,40 @@
+<!-- views/pages/services.ejs -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <% include ../partials/head %>
+</head>
+
+<body class="container">
+
+    <header>
+        <% include ../partials/header %>
+    </header>
+
+    <main>
+                <div class="row posts">
+
+            <% for(post of posts) { %>
+                <div class="col-md-3">
+                    <div class="post">
+                            <h2><%= post.title %></h2>
+                            <!-- <p><%= post.content %></p> -->
+                            <a href="/posts/<%= post.id %>" class="btn btn-primary btn-small">Read More</a>
+                            <a href="/posts/<%= post.id %>/edit" class="btn btn-warning btn-small">Edit</a>
+                            <a href="/posts/<%= post.id %>/delete" class="btn btn-danger btn-small">Delete</a>
+                    </div>
+                </div>
+            <% } %>
+            </div>
+
+    </main>
+
+    <footer>
+        <% include ../partials/footer %>
+    </footer>
+
+</body>
+
+</html>
